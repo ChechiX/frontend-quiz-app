@@ -1,0 +1,85 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/static/Rubik-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/static/Rubik-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik Italic';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../assets/fonts/static/Rubik-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/static/Rubik-Medium.woff2') format('woff2');
+}
+
+@mixin text-preset-1 {
+  font-family: 'Rubik Medium';
+  font-size: clamp(5.5rem, 4.2676rem + 5.2582vw, 9rem);
+  line-height: 1;
+}
+
+@mixin text-preset-2-medium {
+  font-family: 'Rubik Medium';
+  font-size: clamp(2.5rem, 1.9718rem + 2.2535vw, 4rem);
+  line-height: 1;
+}
+
+@mixin text-preset-2-light {
+  font-family: 'Rubik Light';
+  font-size: clamp(2.5rem, 1.9718rem + 2.2535vw, 4rem);
+  line-height: 1;
+}
+
+@mixin text-preset-3 {
+  font-family: 'Rubik Medium';
+  font-size: clamp(1.25rem, 0.8979rem + 1.5023vw, 2.25rem);
+  line-height: 1.2;
+}
+
+@mixin text-preset-4 {
+  font-family: 'Rubik Medium';
+  font-size: clamp(1.125rem, 0.9049rem + 0.939vw, 1.75rem);
+  line-height: 1;
+}
+
+@mixin text-preset-5-medium {
+  font-family: 'Rubik Medium';
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+@mixin text-preset-5-regular {
+  font-family: 'Rubik Regular';
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+@mixin text-preset-5-mobile {
+  font-family: 'Rubik Italic';
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@mixin text-preset-6 {
+  font-family: 'Rubik Italic';
+  font-size: 1.25rem;
+  line-height: 1.5;
+}

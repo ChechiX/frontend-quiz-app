@@ -1,0 +1,159 @@
+@use './styles/variables' as v;
+@use './styles/typography' as t;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  background-color: v.$grey-50;
+  background-image: url('./assets/images/pattern-background-mobile-light.svg');
+  background-repeat: no-repeat;
+}
+
+// ThemeToggleHeader
+
+.header {
+  padding: 1rem 1.5rem;
+}
+
+.theme-toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.theme-toggle__label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  color: v.$grey-500;
+}
+
+// .theme-toggle__icon {
+//   align-content: center;
+// }
+
+.theme-toggle__track {
+  padding: 0.25rem;
+  width: 32px;
+  height: 20px;
+  background-color: v.$purple-600;
+  border-radius: 999px;
+  position: relative;
+}
+
+.theme-toggle__thumb {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: v.$white;
+  border-radius: 50%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+// FrontendQuizApp
+
+.container {
+  padding: 2rem 1.5rem 0 1.5rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title-container__subtitle {
+  color: v.$blue-900;
+  @include t.text-preset-2-light;
+}
+
+.title-container__title {
+  color: v.$blue-900;
+  @include t.text-preset-2-medium;
+}
+
+.header-container__description {
+  color: v.$grey-500;
+  @include t.text-preset-5-mobile;
+}
+
+.subjects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+// SubjectItem
+
+// .subject-item {
+// }
+
+.subject-item__button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: v.$white;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px 0 rgba($color: #8fa0c1, $alpha: 0.14);
+}
+
+.subject-icon {
+  border-radius: 6px;
+}
+
+.subject-icon.subject-html {
+  background-color: v.$orange-50;
+}
+
+.subject-icon.subject-css {
+  background-color: v.$green-100;
+}
+
+.subject-icon.subject-javascript {
+  background-color: v.$blue-50;
+}
+
+.subject-icon.subject-accessibility {
+  background-color: v.$purple-100;
+}
+
+.subject-item__name {
+  color: v.$blue-900;
+  @include t.text-preset-4;
+}
