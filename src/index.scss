@@ -133,23 +133,33 @@ body {
   box-shadow: 0 16px 40px 0 rgba($color: #8fa0c1, $alpha: 0.14);
 }
 
-.subject-icon {
+.subject-icon-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 6px;
 }
 
-.subject-icon.subject-html {
+.subject-icon {
+  width: 29px;
+  height: 29px;
+}
+
+.subject-icon-container.subject-html {
   background-color: v.$orange-50;
 }
 
-.subject-icon.subject-css {
+.subject-icon-container.subject-css {
   background-color: v.$green-100;
 }
 
-.subject-icon.subject-javascript {
+.subject-icon-container.subject-javascript {
   background-color: v.$blue-50;
 }
 
-.subject-icon.subject-accessibility {
+.subject-icon-container.subject-accessibility {
   background-color: v.$purple-100;
 }
 
