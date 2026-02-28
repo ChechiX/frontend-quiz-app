@@ -20,7 +20,7 @@ export const SubjectList = () => {
   }, []);
 
   return (
-    <section>
+    <section className="subject-list">
       <ul className="subjects-container">
         {subjects.map((subject, index) => (
           <SubjectItem
