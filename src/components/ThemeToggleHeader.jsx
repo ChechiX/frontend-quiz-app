@@ -1,10 +1,38 @@
+import { useEffect, useState } from 'react';
+
 export const ThemeToggleHeader = () => {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const storedTheme = localStorage.getItem('theme');
+    return (
+      storedTheme === 'dark' ||
+      (storedTheme === null &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    );
+  });
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  useEffect(() => {
+    if (isDarkMode) {
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
   return (
     <header className="header">
       <input
+        aria-label="Change theme"
         className="theme-toggle__input"
         type="checkbox"
         id="theme-toggle"
+        checked={isDarkMode}
+        onChange={toggleTheme}
       />
       <label className="theme-toggle__label" htmlFor="theme-toggle">
         {/* <span className="theme-toggle__icon"> */}

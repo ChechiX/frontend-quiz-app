@@ -28,6 +28,11 @@ body {
   background-color: v.$grey-50;
   background-image: url('./assets/images/pattern-background-mobile-light.svg');
   background-repeat: no-repeat;
+
+  .dark-mode & {
+    background-color: v.$blue-900;
+    background-image: url('./assets/images/pattern-background-mobile-dark.svg');
+  }
 }
 
 // ThemeToggleHeader
@@ -50,6 +55,10 @@ body {
   align-items: center;
   gap: 0.5rem;
   color: v.$grey-500;
+
+  .dark-mode & {
+    color: v.$white;
+  }
 }
 
 // .theme-toggle__icon {
@@ -73,6 +82,13 @@ body {
   border-radius: 50%;
   z-index: 100;
   cursor: pointer;
+  left: 4px;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  // right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .dark-mode & {
+    left: 16px;
+  }
 }
 
 // FrontendQuizApp
@@ -98,16 +114,28 @@ body {
 .title-container__subtitle {
   color: v.$blue-900;
   @include t.text-preset-2-light;
+
+  .dark-mode & {
+    color: v.$white;
+  }
 }
 
 .title-container__title {
   color: v.$blue-900;
   @include t.text-preset-2-medium;
+
+  .dark-mode & {
+    color: v.$white;
+  }
 }
 
 .header-container__description {
   color: v.$grey-500;
   @include t.text-preset-5-mobile;
+
+  .dark-mode & {
+    color: v.$blue-300;
+  }
 }
 
 .subjects-container {
@@ -117,9 +145,6 @@ body {
 }
 
 // SubjectItem
-
-// .subject-item {
-// }
 
 .subject-item__button {
   display: flex;
@@ -131,6 +156,11 @@ body {
   background-color: v.$white;
   border-radius: 12px;
   box-shadow: 0 16px 40px 0 rgba($color: #8fa0c1, $alpha: 0.14);
+
+  .dark-mode & {
+    background-color: v.$blue-850;
+    box-shadow: 0 16px 40px 0 rgba($color: v.$blue-900, $alpha: 1);
+  }
 }
 
 .subject-icon-container {
@@ -166,4 +196,8 @@ body {
 .subject-item__name {
   color: v.$blue-900;
   @include t.text-preset-4;
+
+  .dark-mode & {
+    color: v.$white;
+  }
 }
