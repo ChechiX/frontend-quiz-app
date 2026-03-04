@@ -330,3 +330,62 @@ body {
     color: v.$white;
   }
 }
+
+// QuizForm
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.quiz-form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quiz-form__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quiz-form__question-number {
+  color: v.$grey-500;
+  @include t.text-preset-5-mobile;
+
+  .dark-mode & {
+    color: v.$blue-300;
+  }
+}
+
+.quiz-form__question-text {
+  color: v.$blue-900;
+  @include t.text-preset-3;
+
+  .dark-mode & {
+    color: v.$white;
+  }
+}
+
+// ProgressBar
+
+.progress-bar {
+  height: 16px;
+  padding: 4px;
+  background-color: v.$white;
+  border-radius: 999px;
+  color: v.$purple-600;
+
+  .dark-mode & {
+    background-color: v.$blue-850;
+  }
+}
+
+.progress-bar__fill {
+  height: 8px;
+  background-color: v.$purple-600;
+  border-radius: 104px;
+}
