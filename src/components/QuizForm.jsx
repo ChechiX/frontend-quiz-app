@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { AnswerOption } from './AnswerOption';
+// import { AnswerOption } from './AnswerOption';
 import { useSubjects } from '../context/SubjectsContext';
 import { ProgressBar } from './ProgressBar';
 
