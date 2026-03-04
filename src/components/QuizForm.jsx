@@ -31,7 +31,7 @@ export const QuizForm = () => {
         />
       </div>
 
-      <AnswerOption answer="4.5:1" />
+      {/* <AnswerOption answer="4.5:1" /> */}
     </form>
   );
 };
