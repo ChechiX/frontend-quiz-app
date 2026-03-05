@@ -1,16 +1,10 @@
-import { useEffect } from 'react';
 import { useParams } from 'react-router';
-import { useSubjects } from '../context/SubjectsContext.js';
+import { useSubjects } from '../context/SubjectsContext';
 import { ThemeToggleHeader } from '../components/ThemeToggleHeader';
-import { QuizForm } from '../components/QuizForm.jsx';
 
-export const QuizPage = () => {
+export const ResultsPage = () => {
   const { subject } = useParams();
-  const { subjects, loading, resetScore } = useSubjects();
-
-  useEffect(() => {
-    resetScore();
-  }, [subject, resetScore]);
+  const { subjects, loading, score } = useSubjects();
 
   if (loading) return <div>Loading...</div>;
 
@@ -26,7 +20,7 @@ export const QuizPage = () => {
         subjectName={subjectData.title}
       />
 
-      <QuizForm />
+      <div>{score}</div>
     </>
   );
 };
