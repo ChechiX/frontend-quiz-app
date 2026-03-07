@@ -266,6 +266,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 16px 40px 0 rgba($color: #8fa0c1, $alpha: 0.14);
   text-decoration: none;
+  cursor: pointer;
 
   .dark-mode & {
     background-color: v.$blue-850;
@@ -445,6 +446,7 @@ body {
   background-color: v.$white;
   border-radius: 12px;
   box-shadow: 0 16px 40px 0 rgba($color: #8fa0c1, $alpha: 0.14);
+  cursor: pointer;
 
   .dark-mode & {
     background-color: v.$blue-850;
