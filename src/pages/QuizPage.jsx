@@ -6,11 +6,11 @@ import { QuizForm } from '../components/QuizForm.jsx';
 
 export const QuizPage = () => {
   const { subject } = useParams();
-  const { subjects, loading, resetScore } = useSubjects();
+  const { subjects, loading, setActiveSubject } = useSubjects();
 
   useEffect(() => {
-    resetScore();
-  }, [subject, resetScore]);
+    setActiveSubject(subject);
+  }, [subject, setActiveSubject]);
 
   if (loading) return <div>Loading...</div>;
 

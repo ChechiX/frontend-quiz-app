@@ -338,18 +338,42 @@ body {
   flex-direction: column;
   gap: 2.5rem;
   padding: 2rem 1.5rem 0 1.5rem;
+
+  @media (min-width: 48rem) {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 90rem) {
+    max-width: 72.3125rem;
+    flex-direction: row;
+    padding: 0;
+    gap: 8rem;
+  }
 }
 
 .quiz-form__container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (min-width: 48rem) {
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 90rem) {
+    gap: 11.5rem;
+  }
 }
 
 .quiz-form__text-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (min-width: 48rem) {
+    gap: 1.5rem;
+  }
 }
 
 .quiz-form__question-number {
@@ -374,6 +398,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (min-width: 48rem) {
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 90rem) {
+    gap: 1rem;
+    flex: 1;
+  }
 }
 
 .quiz-form__button {
@@ -424,6 +457,10 @@ body {
 
   &--incorrect {
     border: 3px solid v.$red-500 !important;
+  }
+
+  @media (min-width: 90rem) {
+    padding: 1.5rem;
   }
 }
 
