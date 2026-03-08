@@ -96,6 +96,7 @@ export const QuizForm = () => {
           className="quiz-form__button"
           onClick={handleClick}
           type="submit"
+          disabled={selectedOption === null}
         >
           {showFeedback ? 'Next Question' : 'Submit Answer'}
         </button>

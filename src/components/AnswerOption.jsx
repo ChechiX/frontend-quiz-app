@@ -1,3 +1,6 @@
+import correctIcon from '../assets/images/icon-correct.svg';
+import incorrectIcon from '../assets/images/icon-incorrect.svg';
+
 export const AnswerOption = ({
   answer,
   letter,
@@ -10,7 +13,7 @@ export const AnswerOption = ({
 }) => {
   let optionClass = 'answer-option';
 
-  if (isCorrect) optionClass += ' answer-option--correct';
+  if (isCorrect && isSelected) optionClass += ' answer-option--correct';
   else if (isIncorrect) optionClass += ' answer-option--incorrect';
   // else if (isSelected) optionClass += ' answer-option--selected';
 
@@ -31,6 +34,14 @@ export const AnswerOption = ({
         </div>
 
         {answer}
+
+        {showFeedback && (isCorrect || isIncorrect) && (
+          <img
+            className="answer-option__icon"
+            src={isCorrect ? correctIcon : incorrectIcon}
+            alt={isCorrect ? 'Correct' : 'Incorrect'}
+          />
+        )}
       </label>
     </div>
   );

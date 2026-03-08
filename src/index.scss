@@ -364,6 +364,7 @@ body {
 
   @media (min-width: 90rem) {
     gap: 11.5rem;
+    width: 29.0625rem;
   }
 }
 
@@ -417,6 +418,12 @@ body {
   color: v.$white;
   border-radius: 12px;
   @include t.text-preset-4;
+}
+
+.quiz-form__button:disabled {
+  background: linear-gradient(rgba(#ffffff, 0.5), rgba(#ffffff, 0.5))
+    v.$purple-600;
+  cursor: not-allowed;
 }
 
 // ProgressBar
@@ -507,6 +514,10 @@ body {
 
 .answer-option__letter {
   color: v.$grey-500;
+}
+
+.answer-option__icon {
+  margin-left: auto;
 }
 
 // ResultsPage
